@@ -1,0 +1,29 @@
+.suit {
+    max-width: 4rem;
+}
+
+.my-card {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 0.25rem;
+    width: 4.5rem;
+  }
+
+.card-stack {
+    position: relative;
+}  
+
+.card-stack > .card {
+    position: absolute;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+  
+.card-stack > .card {
+z-index: 1;
+transform: translate(
+    calc((100% / var(--num-cards)) * var(--card-index)), 
+    calc((100% / var(--num-cards)) * var(--card-index))
+);
+}
